@@ -2,7 +2,7 @@ import * as IotaQR from "@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js";
 
 async function generateQRCodePaymentData(): Promise<void> {
     document.getElementById("outputQR").classList.remove("alert", "alert-danger");
-    document.getElementById("outputQR").innerHTML = "";
+    document.getElementById("outputQR").innerHTML = "Generating...";
 
     try {
         const address = getElementValue("testAddress");
@@ -42,7 +42,7 @@ async function generateQRCodePaymentData(): Promise<void> {
 
 async function generateQRCodeAddress(): Promise<void> {
     document.getElementById("outputQR2").classList.remove("alert", "alert-danger");
-    document.getElementById("outputQR2").innerHTML = "";
+    document.getElementById("outputQR2").innerHTML = "Generating...";
 
     try {
         const address = getElementValue("testAddress2");
