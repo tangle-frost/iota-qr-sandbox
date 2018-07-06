@@ -33,6 +33,7 @@ async function generateQRCodePaymentData(): Promise<void> {
                 background: IotaQR.Color.fromHex(background)
             });
 
+        document.getElementById("outputQR").innerHTML = "";
         document.getElementById("outputQR").appendChild(htmlElement);
     } catch (err) {
         document.getElementById("outputQR").classList.add("alert", "alert-danger");
@@ -62,6 +63,7 @@ async function generateQRCodeAddress(): Promise<void> {
                 background: IotaQR.Color.fromHex(background)
             });
 
+        document.getElementById("outputQR2").innerHTML = "";
         document.getElementById("outputQR2").appendChild(htmlElement);
     } catch (err) {
         document.getElementById("outputQR2").classList.add("alert", "alert-danger");
