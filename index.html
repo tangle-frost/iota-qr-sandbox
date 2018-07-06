@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <title>Tangle Frost - IOTA QR Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+
+<body class="container">
+    <br/>
+    <div class="d-flex">
+        <img src="./images/logo.png" />
+        <div class="flex-fill ml-3">
+            <h3>Tangle Frost</h3>
+            <div>IOTA QR Sandbox</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <p>Demonstration of the IOTA QR Code generation library <a href="https://github.com/tangle-frost/iota-qr-lib" target="_blank">https://github.com/tangle-frost/iota-qr-lib</a></p>
+            <p>Use the forms below to generate QR codes for your data.</p>
+            <p>
+                <b>Please note Trinity wallet does not yet consume the Amount or Tag fields for Payment Data.</b>
+                <br/> See
+                <a href="https://docs.iota.works/trinity/information/qr" target="_blank">https://docs.iota.works/trinity/information/qr</a> for more details.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h2>Payment Data</h2>
+            <p>Enter your data in the form to generate a QR code for Payment Data.</p>
+            <div class="form-group form-inline">
+                <label for="testAddress">Address (Trytes)&nbsp;</label>
+                <input class="form-control form-control-sm" id="testAddress" value="" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testAmount">Amount (IOTA)&nbsp;</label>
+                <input class="form-control form-control-sm" id="testAmount" value="" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testTag">Tag (Trytes)&nbsp;</label>
+                <input class="form-control form-control-sm" id="testTag" value="" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testMessage">Message (Plain Text)&nbsp;</label>
+                <input class="form-control form-control-sm" id="testMessage" value="" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testRenderType">Render Type&nbsp;</label>
+                <select class="form-control form-control-sm" id="testRenderType">
+                    <option>jpg</option>
+                    <option>png</option>
+                    <option>svg</option>
+                    <option>txt</option>
+                    <option>canvas</option>
+                </select>
+            </div>
+            <div class="form-group form-inline">
+                <label for="testTypeNumber">QR Type Number (0 for auto)&nbsp;</label>
+                <input class="form-control form-control-sm" id="testTypeNumber" value="16" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testCellSize">Cell Size&nbsp;</label>
+                <input class="form-control form-control-sm" id="testCellSize" value="5" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testMarginSize">Margin Size&nbsp;</label>
+                <input class="form-control form-control-sm" id="testMarginSize" value="10" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testForeground">Forground Color&nbsp;</label>
+                <input class="form-control form-control-sm" id="testForeground" value="#000000" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testBackground">Background Color&nbsp;</label>
+                <input class="form-control form-control-sm" id="testBackground" value="#FFFFFF" />
+            </div>
+            <button class="btn btn-primary" id="btnPaymentData">Generate QR Code for Payment Data</button>
+        </div>
+        <div class="col">
+            <h2 for="outputQR2">Result</h2>
+            <div id="outputQR">No result generated yet.</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h2>Address Only</h2>
+            <p>Enter your data in the form to generate a QR code for Address.</p>
+            <div class="form-group form-inline">
+                <label for="testAddress2">Address (Trytes)&nbsp;</label>
+                <input class="form-control form-control-sm" id="testAddress2" value="" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testRenderType2">Render Type&nbsp;</label>
+                <select class="form-control form-control-sm" id="testRenderType2">
+                    <option>jpg</option>
+                    <option>png</option>
+                    <option>svg</option>
+                    <option>txt</option>
+                    <option>canvas</option>
+                </select>
+            </div>
+            <div class="form-group form-inline">
+                <label for="testCellSize2">Cell Size&nbsp;</label>
+                <input class="form-control form-control-sm" id="testCellSize2" value="5" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testMarginSize2">Margin Size&nbsp;</label>
+                <input class="form-control form-control-sm" id="testMarginSize2" value="10" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testForeground2">Forground Color&nbsp;</label>
+                <input class="form-control form-control-sm" id="testForeground2" value="#000000" />
+            </div>
+            <div class="form-group form-inline">
+                <label for="testBackground2">Background Color&nbsp;</label>
+                <input class="form-control form-control-sm" id="testBackground2" value="#FFFFFF" />
+            </div>
+            <button class="btn btn-primary" id="btnAddress">Generate QR Code for Address</button>
+        </div>
+        <div class="col">
+            <h2 for="outputQR2">Result</h2>
+            <div id="outputQR2">No result generated yet.</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <hr/>
+            <p>You can find the original source for this sandbox at
+                <a href="https://github.com/tangle-frost/iota-qr-sandbox"
+                    target="_blank">https://github.com/tangle-frost/iota-qr-sandbox</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="src/index.ts"></script>
+</body>
+
+</html>
