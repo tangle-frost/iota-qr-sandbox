@@ -30,7 +30,8 @@ async function generateQRCodePaymentData(): Promise<void> {
             parseFloat(marginSize),
             {
                 foreground: IotaQR.Color.fromHex(foreground),
-                background: IotaQR.Color.fromHex(background)
+                background: IotaQR.Color.fromHex(background),
+                cssClass: "text-monospace"
             });
 
         document.getElementById("outputQR").innerHTML = "";
@@ -60,7 +61,8 @@ async function generateQRCodeAddress(): Promise<void> {
             parseFloat(marginSize),
             {
                 foreground: IotaQR.Color.fromHex(foreground),
-                background: IotaQR.Color.fromHex(background)
+                background: IotaQR.Color.fromHex(background),
+                cssClass: "text-monospace"
             });
 
         document.getElementById("outputQR2").innerHTML = "";
