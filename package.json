@@ -11,8 +11,8 @@
         "@tangle-frost/iota-qr-lib": "^0.0.5"
     },
     "devDependencies": {
-        "parcel-bundler": "^1.8.1",
-        "typescript": "^2.9.2"
+        "parcel-bundler": "^1.9.7",
+        "typescript": "^3.0.1"
     },
     "keywords": [
         "iota",
