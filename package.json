@@ -1,6 +1,6 @@
 {
     "name": "iota-qr-sandbox",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Sandbox for experimenting with Tangle Frost iota-qr-lib",
     "main": "index.html",
     "scripts": {
@@ -8,7 +8,7 @@
         "build": "parcel build index.html"
     },
     "dependencies": {
-        "@tangle-frost/iota-qr-lib": "^0.0.5"
+        "@tangle-frost/iota-qr-lib": "^0.0.6"
     },
     "devDependencies": {
         "parcel-bundler": "^1.9.7",
